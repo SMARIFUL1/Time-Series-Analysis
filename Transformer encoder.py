@@ -72,8 +72,6 @@ class PositionwiseFeedForward(nn.Module):
         x = self.dropout(x)   # 30 x 200 x 2048
         x = self.linear2(x)   # 30 x 200 x 512
         return x
-
-
 class EncoderLayer(nn.Module):
     def __init__(self, d_model, num_heads, d_ff, drop_prob):
         super(EncoderLayer, self).__init__()
